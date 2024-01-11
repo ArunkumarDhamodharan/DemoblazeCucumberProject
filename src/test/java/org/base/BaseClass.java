@@ -30,12 +30,12 @@ public class BaseClass {
 		switch (browserType) {
 		case "Chrome":
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\ELCOT\\eclipse-workspace\\DemoBlazeCucumberProject\\driver\\chromedriver.exe");
+					"C:\\Users\\Vy Systems\\git\\DemoblazeCucumberProject\\driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			break;
 		case "Edge":
 			System.setProperty("webdriver.Edge.driver",
-					"C:\\Users\\ELCOT\\eclipse-workspace\\DemoBlazeCucumberProject\\driver\\msedgedriver.exe");
+					"C:\\Users\\Vy Systems\\git\\DemoblazeCucumberProject\\driver\\msedgedriver.exe");
 			driver = new EdgeDriver();
 			break;
 		default:

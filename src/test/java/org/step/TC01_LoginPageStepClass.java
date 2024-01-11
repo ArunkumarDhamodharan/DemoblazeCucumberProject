@@ -15,8 +15,9 @@ public class TC01_LoginPageStepClass extends BaseClass {
 		try {
 			getDriver("Chrome");
 			windMax();
-			
+
 			getUrl("https://www.demoblaze.com/");
+			Thread.sleep(3000);
 			System.out.println("Browser and Url getting Launched successfully");
 
 		} catch (Exception e) {
@@ -32,16 +33,15 @@ public class TC01_LoginPageStepClass extends BaseClass {
 
 			WebElement login = a.getLogin();
 			login.click();
+			Thread.sleep(2000);
 
 			WebElement userName = a.getUserName();
-			userName.clear();
-//		sendBasedOnJs(excelRead(1, 0), userName);
 			userName.sendKeys("arunkumar9344974530@gmail.com");
+			Thread.sleep(2000);
 
 			WebElement password = a.getPassword();
-			password.clear();
-//		sendBasedOnJs(excelRead(1,1),password );
 			password.sendKeys("Arun111#@");
+			Thread.sleep(1000);
 
 			System.out.println("Valid UserName and Password are Entered");
 		} catch (Exception e) {
@@ -99,6 +99,7 @@ public class TC01_LoginPageStepClass extends BaseClass {
 			Thread.sleep(3000);
 			WebElement placeOrder = a.getPlaceOrder();
 			placeOrder.click();
+			Thread.sleep(2000);
 
 			System.out.println("Place Order Clicked Successfullly ");
 
@@ -113,28 +114,32 @@ public class TC01_LoginPageStepClass extends BaseClass {
 			PageClass a = new PageClass();
 
 			WebElement name = a.getName();
-			sendBasedOnJs(excelRead(1, 2), name);
-//		name.sendKeys("Arunkumar");
+			name.sendKeys("Arunkumar");
+			Thread.sleep(1000);
 
 			WebElement country = a.getCountry();
-			sendBasedOnJs(excelRead(1, 3), country);
-//		country.sendKeys("India");
+			country.sendKeys("India");
+			Thread.sleep(1000);
+
 
 			WebElement city = a.getCity();
-			sendBasedOnJs(excelRead(1, 4), city);
-//		city.sendKeys("Chennai");
+			city.sendKeys("Chennai");
+			Thread.sleep(1000);
+
 
 			WebElement creditCard = a.getCreditCard();
-			sendBasedOnJs(excelRead(1, 5), creditCard);
-//		creditCard.sendKeys("7890876756789087");
+			creditCard.sendKeys("7890876756789087");
+			Thread.sleep(1000);
+
 
 			WebElement month = a.getMonth();
-			sendBasedOnJs(excelRead(1, 6), month);
-//		month.sendKeys("11");
+			month.sendKeys("11");
+			Thread.sleep(1000);
+
 
 			WebElement year = a.getYear();
-			sendBasedOnJs(excelRead(1, 7), year);
-//		year.sendKeys("2025");
+			year.sendKeys("2025");
+
 
 			Thread.sleep(3000);
 			WebElement purchaseButton = a.getPurchaseButton();
@@ -152,6 +157,7 @@ public class TC01_LoginPageStepClass extends BaseClass {
 	public void user_should_get_the_buy_details() {
 		try {
 			PageClass a = new PageClass();
+			System.out.println("*********************");
 
 			WebElement buyDetails = a.getBuyDetails();
 			String text2 = buyDetails.getText();
