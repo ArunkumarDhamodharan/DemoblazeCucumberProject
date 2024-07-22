@@ -9,4 +9,3 @@ Feature: To Verify  Demo E-Commerce WebPage
     And User Should Enter The Valid Credentials
     And User Should Get The BuyDetails
     Then User Should verify the Succesfull Message
-    

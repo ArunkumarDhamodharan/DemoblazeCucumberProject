@@ -24,7 +24,5 @@ public class GenerateReportClass extends BaseClass {
 		
 		ReportBuilder r=new ReportBuilder(li, con);
 		r.generateReports();
-		
-		
 	}
 }
